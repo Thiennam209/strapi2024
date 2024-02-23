@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "healthcare_group_contents",
+  "info": {
+    "singularName": "healthcare-group-content",
+    "pluralName": "healthcare-group-contents",
+    "displayName": "HealthcareGroupContent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::healthcare-content.healthcare-content"
+    }
+  }
+}

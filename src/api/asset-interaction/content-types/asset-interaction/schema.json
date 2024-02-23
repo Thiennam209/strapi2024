@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asset_interactions",
+  "info": {
+    "singularName": "asset-interaction",
+    "pluralName": "asset-interactions",
+    "displayName": "AssetInteraction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "move": {
+      "type": "boolean"
+    },
+    "rotate": {
+      "type": "boolean"
+    },
+    "scale": {
+      "type": "boolean"
+    },
+    "constraint": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Floor",
+        "Wall"
+      ]
+    },
+    "assets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::asset.asset",
+      "mappedBy": "interactions"
+    },
+    "interaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::interaction.interaction",
+      "inversedBy": "asset_interactions"
+    }
+  }
+}

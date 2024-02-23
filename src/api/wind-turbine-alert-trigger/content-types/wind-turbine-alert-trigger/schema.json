@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wind_turbine_alert_triggers",
+  "info": {
+    "singularName": "wind-turbine-alert-trigger",
+    "pluralName": "wind-turbine-alert-triggers",
+    "displayName": "WindTurbineAlertTrigger"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isCancelAlert": {
+      "type": "boolean"
+    }
+  }
+}

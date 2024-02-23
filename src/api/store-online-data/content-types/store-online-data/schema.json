@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "store_online_datas",
+  "info": {
+    "singularName": "store-online-data",
+    "pluralName": "store-online-datas",
+    "displayName": "StoreOnlineData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OnlineVisitsLastMonth": {
+      "type": "integer"
+    },
+    "OnlineUniqueVisitorsLastMonth": {
+      "type": "integer"
+    },
+    "OnlinePagesPerVisit": {
+      "type": "float"
+    },
+    "OnlineVisitsIncreasePercents": {
+      "type": "float"
+    },
+    "ReferralVisits": {
+      "type": "integer"
+    }
+  }
+}

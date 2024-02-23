@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "Business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "businessId": {
+      "type": "string"
+    },
+    "Manager": {
+      "type": "string"
+    },
+    "ManagerImage": {
+      "type": "string"
+    },
+    "NumberOfPeople": {
+      "type": "integer"
+    },
+    "codeIntegrationHead": {
+      "type": "string"
+    },
+    "codeIntegrationBody": {
+      "type": "string"
+    },
+    "sketchfabCredentialCode": {
+      "type": "string"
+    },
+    "azure_credential": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::azure-credential.azure-credential",
+      "mappedBy": "business"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "position_in_presets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::position-in-preset.position-in-preset",
+      "mappedBy": "business"
+    },
+    "presets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::preset.preset",
+      "mappedBy": "business"
+    }
+  }
+}

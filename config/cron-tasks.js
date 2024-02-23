@@ -3,11 +3,13 @@ const axios = require("axios");
 module.exports = {
   postCountEmail: {
     task: async ({ strapi }) => {
-      const entry = await strapi.entityService.update("api::test.test", 1, {
-        data: {
-          Testing: "xxx",
-        },
-      });
+      // const entry = await strapi.entityService.update("api::test.test", 1, {
+      //   data: {
+      //     Testing: "xxx",
+      //   },
+      // });
+
+      const entry = "";
 
       console.log("Hello: ", entry);
       const URL = "https://sketchfab.com/oauth2/token/";
@@ -25,11 +27,14 @@ module.exports = {
         })
         .then((response) => {
           axios
-            .get("https://api.sketchfab.com/v3/models/047bb0dd5e224cf69130e2a0669a2fb8/download", {
-              headers: {
-                Authorization: `Bearer ${response.data.access_token}`,
-              },
-            })
+            .get(
+              "https://api.sketchfab.com/v3/models/047bb0dd5e224cf69130e2a0669a2fb8/download",
+              {
+                headers: {
+                  Authorization: `Bearer ${response.data.access_token}`,
+                },
+              }
+            )
             .then((res) => console.log(res))
             .catch((err) => console.log(err));
         })

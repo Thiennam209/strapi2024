@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "azure_credentials",
+  "info": {
+    "singularName": "azure-credential",
+    "pluralName": "azure-credentials",
+    "displayName": "AzureCredential",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectName": {
+      "type": "string"
+    },
+    "IoTHubConnectionString": {
+      "type": "string"
+    },
+    "SignalRPath": {
+      "type": "string"
+    },
+    "business": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::business.business",
+      "inversedBy": "azure_credential"
+    }
+  }
+}

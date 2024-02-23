@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "open_ais",
+  "info": {
+    "singularName": "open-ai",
+    "pluralName": "open-ais",
+    "displayName": "OpenAI"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StartAI": {
+      "type": "boolean"
+    },
+    "Label_ID": {
+      "type": "integer"
+    },
+    "Question": {
+      "type": "text"
+    },
+    "Answer": {
+      "type": "text"
+    }
+  }
+}

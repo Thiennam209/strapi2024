@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_twin_factory_machines",
+  "info": {
+    "singularName": "digital-twin-factory-machine",
+    "pluralName": "digital-twin-factory-machines",
+    "displayName": "DigitalTwinFactory/Machine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MachineId": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "boolean"
+    },
+    "Enable": {
+      "type": "boolean"
+    },
+    "chartColumn": {
+      "type": "integer"
+    },
+    "chartRow": {
+      "type": "integer"
+    },
+    "asset": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asset.asset",
+      "mappedBy": "machines"
+    }
+  }
+}

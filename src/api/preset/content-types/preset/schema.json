@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presets",
+  "info": {
+    "singularName": "preset",
+    "pluralName": "presets",
+    "displayName": "Preset"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "positions": {
+      "type": "json"
+    },
+    "rotations": {
+      "type": "json"
+    },
+    "scales": {
+      "type": "json"
+    },
+    "preset": {
+      "type": "string"
+    },
+    "presetPosition": {
+      "type": "json"
+    },
+    "presetRotation": {
+      "type": "json"
+    },
+    "businessId": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset",
+      "mappedBy": "preset"
+    },
+    "business": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::business.business",
+      "inversedBy": "presets"
+    }
+  }
+}

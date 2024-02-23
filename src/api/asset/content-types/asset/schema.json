@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "singularName": "asset",
+    "pluralName": "assets",
+    "displayName": "Asset",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "assetUID": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "isPublished": {
+      "type": "boolean"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "qrcode": {
+      "type": "string"
+    },
+    "parts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::part.part",
+      "mappedBy": "asset"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "assets"
+    },
+    "interactions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::asset-interaction.asset-interaction",
+      "inversedBy": "assets"
+    },
+    "machines": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::digital-twin-factory-machine.digital-twin-factory-machine",
+      "inversedBy": "asset"
+    },
+    "preset": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::preset.preset",
+      "inversedBy": "assets"
+    },
+    "position_in_presets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::position-in-preset.position-in-preset",
+      "mappedBy": "asset"
+    }
+  }
+}

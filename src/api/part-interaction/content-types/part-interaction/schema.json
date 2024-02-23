@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "part_interactions",
+  "info": {
+    "singularName": "part-interaction",
+    "pluralName": "part-interactions",
+    "displayName": "PartInteraction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "move": {
+      "type": "boolean"
+    },
+    "rotate": {
+      "type": "boolean"
+    },
+    "constraint": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Floor",
+        "Wall"
+      ]
+    },
+    "interaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::interaction.interaction",
+      "inversedBy": "part_interactions"
+    },
+    "part": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::part.part",
+      "inversedBy": "part_interactions"
+    }
+  }
+}

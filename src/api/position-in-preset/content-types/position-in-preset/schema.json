@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "position_in_presets",
+  "info": {
+    "singularName": "position-in-preset",
+    "pluralName": "position-in-presets",
+    "displayName": "PositionInPreset"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "positions": {
+      "type": "json"
+    },
+    "rotations": {
+      "type": "json"
+    },
+    "scales": {
+      "type": "json"
+    },
+    "preset": {
+      "type": "string"
+    },
+    "asset": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asset.asset",
+      "inversedBy": "position_in_presets"
+    },
+    "business": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::business.business",
+      "inversedBy": "position_in_presets"
+    }
+  }
+}

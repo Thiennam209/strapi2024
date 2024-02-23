@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "manu_factories",
+  "info": {
+    "singularName": "manu-factory",
+    "pluralName": "manu-factories",
+    "displayName": "ManuFactory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MachineId": {
+      "type": "string"
+    },
+    "Time": {
+      "type": "time"
+    },
+    "Pressure": {
+      "type": "decimal"
+    },
+    "Voltage": {
+      "type": "decimal"
+    },
+    "Current": {
+      "type": "decimal"
+    },
+    "ProductionTime": {
+      "type": "decimal"
+    },
+    "Temperature": {
+      "type": "decimal"
+    },
+    "MachineName": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    }
+  }
+}
