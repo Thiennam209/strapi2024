@@ -16,7 +16,8 @@
       "type": "string"
     },
     "businessId": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "Manager": {
       "type": "string"
@@ -28,29 +29,25 @@
       "type": "integer"
     },
     "codeIntegrationHead": {
-      "type": "string"
+      "type": "text"
     },
     "codeIntegrationBody": {
-      "type": "string"
-    },
-    "sketchfabCredentialCode": {
-      "type": "string"
-    },
-    "azure_credential": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::azure-credential.azure-credential",
-      "mappedBy": "business"
+      "type": "text"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "sketchfabCredentialCode": {
+      "type": "string",
+      "unique": false
     },
     "position_in_presets": {
       "type": "relation",
@@ -62,6 +59,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::preset.preset",
+      "mappedBy": "business"
+    },
+    "azure_credential": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::azure-credential.azure-credential",
       "mappedBy": "business"
     }
   }

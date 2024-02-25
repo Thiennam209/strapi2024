@@ -31,7 +31,13 @@
       "type": "string"
     },
     "productId": {
-      "type": "string"
+      "type": "string",
+      "unique": true
+    },
+    "backup_assets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset"
     },
     "modelsNumber": {
       "type": "integer"
@@ -44,20 +50,11 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "arViewer": {
       "type": "string"
-    },
-    "assets": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::asset.asset",
-      "mappedBy": "product"
     },
     "category": {
       "type": "relation",
@@ -65,10 +62,11 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "backup_assets": {
+    "assets": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::asset.asset"
+      "target": "api::asset.asset",
+      "mappedBy": "product"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "store-online-data",
     "pluralName": "store-online-datas",
-    "displayName": "StoreOnlineData"
+    "displayName": "StoreOnlineData",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

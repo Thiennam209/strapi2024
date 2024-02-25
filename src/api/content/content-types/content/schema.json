@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "HealthcareContent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Content": {
+      "type": "text"
+    },
+    "ContentName": {
+      "type": "string"
+    },
+    "ContentType": {
+      "type": "string"
+    }
+  }
+}

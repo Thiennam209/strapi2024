@@ -4,8 +4,7 @@
   "info": {
     "singularName": "part-interaction",
     "pluralName": "part-interactions",
-    "displayName": "PartInteraction",
-    "description": ""
+    "displayName": "PartInteraction"
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +13,18 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "part": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::part.part",
+      "inversedBy": "part_interactions"
+    },
+    "interaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::interaction.interaction",
+      "inversedBy": "part_interactions"
     },
     "move": {
       "type": "boolean"
@@ -28,18 +39,6 @@
         "Floor",
         "Wall"
       ]
-    },
-    "interaction": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::interaction.interaction",
-      "inversedBy": "part_interactions"
-    },
-    "part": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::part.part",
-      "inversedBy": "part_interactions"
     }
   }
 }

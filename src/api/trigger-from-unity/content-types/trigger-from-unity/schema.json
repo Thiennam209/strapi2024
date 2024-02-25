@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "triggers_from_unity",
+  "info": {
+    "singularName": "trigger-from-unity",
+    "pluralName": "triggers-from-unity",
+    "displayName": "StoreTriggerFromUnity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StoreStartSimulate": {
+      "type": "boolean"
+    },
+    "ProductOnWhatShelvesList": {
+      "type": "string"
+    },
+    "ProductsBonusList": {
+      "type": "string"
+    },
+    "ProductsPenaltyList": {
+      "type": "string"
+    }
+  }
+}

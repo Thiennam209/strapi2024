@@ -4,13 +4,20 @@
   "info": {
     "singularName": "preset",
     "pluralName": "presets",
-    "displayName": "Preset"
+    "displayName": "Preset",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "assets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset",
+      "mappedBy": "preset"
+    },
     "positions": {
       "type": "json"
     },
@@ -19,6 +26,12 @@
     },
     "scales": {
       "type": "json"
+    },
+    "business": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::business.business",
+      "inversedBy": "presets"
     },
     "preset": {
       "type": "string"
@@ -31,18 +44,6 @@
     },
     "businessId": {
       "type": "string"
-    },
-    "assets": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::asset.asset",
-      "mappedBy": "preset"
-    },
-    "business": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::business.business",
-      "inversedBy": "presets"
     }
   }
 }

@@ -15,11 +15,24 @@
     "name": {
       "type": "string"
     },
+    "asset": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asset.asset",
+      "inversedBy": "parts"
+    },
+    "part_interactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::part-interaction.part-interaction",
+      "mappedBy": "part"
+    },
     "description": {
       "type": "richtext"
     },
     "cover": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "displayname": {
       "type": "string"
@@ -47,7 +60,9 @@
         "BarChartTwoColumn01",
         "BarChartTwoColumn02",
         "Dashboard003"
-      ]
+      ],
+      "required": false,
+      "default": "none"
     },
     "unit": {
       "type": "string"
@@ -70,18 +85,6 @@
     },
     "chartOrder": {
       "type": "integer"
-    },
-    "asset": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::asset.asset",
-      "inversedBy": "parts"
-    },
-    "part_interactions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::part-interaction.part-interaction",
-      "mappedBy": "part"
     }
   }
 }

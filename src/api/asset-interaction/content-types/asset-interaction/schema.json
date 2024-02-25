@@ -4,8 +4,7 @@
   "info": {
     "singularName": "asset-interaction",
     "pluralName": "asset-interactions",
-    "displayName": "AssetInteraction",
-    "description": ""
+    "displayName": "AssetInteraction"
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +13,12 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "interaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::interaction.interaction",
+      "inversedBy": "asset_interactions"
     },
     "move": {
       "type": "boolean"
@@ -36,13 +41,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::asset.asset",
-      "mappedBy": "interactions"
-    },
-    "interaction": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::interaction.interaction",
-      "inversedBy": "asset_interactions"
+      "inversedBy": "interactions"
     }
   }
 }

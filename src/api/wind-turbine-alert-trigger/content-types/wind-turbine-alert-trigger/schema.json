@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wind-turbine-alert-trigger",
     "pluralName": "wind-turbine-alert-triggers",
-    "displayName": "WindTurbineAlertTrigger"
+    "displayName": "WindTurbineAlertTrigger",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "manu-factory",
     "pluralName": "manu-factories",
-    "displayName": "ManuFactory"
+    "displayName": "ManuFactory",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

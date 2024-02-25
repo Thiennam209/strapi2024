@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preset_names",
+  "info": {
+    "singularName": "preset-name",
+    "pluralName": "preset-names",
+    "displayName": "PresetBackup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Object": {
+      "type": "json"
+    },
+    "Key": {
+      "type": "string"
+    },
+    "businessId": {
+      "type": "string"
+    }
+  }
+}

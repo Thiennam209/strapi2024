@@ -4,7 +4,8 @@
   "info": {
     "singularName": "open-ai",
     "pluralName": "open-ais",
-    "displayName": "OpenAI"
+    "displayName": "OpenAI",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

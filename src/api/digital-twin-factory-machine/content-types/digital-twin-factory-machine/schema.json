@@ -4,7 +4,8 @@
   "info": {
     "singularName": "digital-twin-factory-machine",
     "pluralName": "digital-twin-factory-machines",
-    "displayName": "DigitalTwinFactory/Machine"
+    "displayName": "DigitalTwinFactory/Machine",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,17 +21,21 @@
     "Enable": {
       "type": "boolean"
     },
-    "chartColumn": {
-      "type": "integer"
-    },
-    "chartRow": {
-      "type": "integer"
-    },
     "asset": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::asset.asset",
-      "mappedBy": "machines"
+      "inversedBy": "machines"
+    },
+    "chartColumn": {
+      "type": "integer",
+      "min": 2,
+      "default": 3
+    },
+    "chartRow": {
+      "type": "integer",
+      "default": 3,
+      "min": 1
     }
   }
 }
